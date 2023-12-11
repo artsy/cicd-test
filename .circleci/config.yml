@@ -24,9 +24,17 @@ only_release: &only_release
     branches:
       only: release
 
+jobs:
+  run-script:
+    docker:
+      - image: cimg/base:2023.12
+    steps:
+      - run: echo "THIS IS THE BEST SCRIPT EVER"
+
 workflows:
   build-deploy:
     jobs:
+      - run-script
       - horizon/block:
           <<: *only_release
           context: horizon
