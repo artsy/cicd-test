@@ -1,3 +1,5 @@
 ---
 project-name: cicd-test
 git-remote: git@github.com:artsy/cicd-test.git
+template-config-files:
+  - s3://artsy-citadel/k8s/hokusai-vars.yml
