@@ -29,7 +29,7 @@ jobs:
     docker:
       - image: cimg/base:2023.12
     steps:
-      - run: echo "THIS IS THE BEST ${ADJECTIVE} EVER"
+      - run: echo "THIS IS THE ${ADJECTIVE} JOB EVER"
 
 workflows:
   build-deploy:
